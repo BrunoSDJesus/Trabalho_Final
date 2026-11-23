@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posts e usuários</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <h1>Posts e usuários</h1>
+    <input type="search" id="busca" placeholder="Buscar por nome, e-mail ou ID do post" aria-label="Buscar">
+    <p id="contador">Carregando dados...</p>
+  </header>
+
+  <main>
+    <div id="lista">
+      <section>
+        <h2>Usuários</h2>
+        <div id="lista-usuarios" class="lista-usuarios"></div>
+      </section>
+
+      <section>
+        <h2>Posts</h2>
+        <div id="grid-posts" class="grid"></div>
+      </section>
+    </div>
+
+    <section id="detalhe" hidden>
+      <button id="voltar" type="button">Voltar para a lista</button>
+      <div id="conteudo-detalhe"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

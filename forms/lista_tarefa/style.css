@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo */
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #202020;
+}
+
+/* Painel principal */
+.box {
+    width: 500px;
+    height: 700px;
+
+    padding: 35px;
+
+    background-color: whitesmoke;
+
+    border: 1px solid #dee2e6;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Área superior */
+.box1 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Campo da tarefa */
+#tarefa {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 14px;
+
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+
+    background-color: #f8f9fa;
+
+    color: #343a40;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+#tarefa:focus {
+    background-color: #ffffff;
+    border-color: #6c757d;
+}
+
+/* Botão adicionar */
+#add {
+    width: 100%;
+    height: 42px;
+
+    margin-top: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #343a40;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#add:hover {
+    background-color: #212529;
+}
+
+/* Lista */
+#lista {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+/* Cada tarefa */
+#lista li {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 12px;
+    margin-bottom: 10px;
+
+    background-color: #f8f9fa;
+
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+
+    color: #343a40;
+
+    font-size: 15px;
+}
+
+/* Texto da tarefa */
+#lista li span {
+    flex: 1;
+
+    padding-right: 10px;
+
+    word-break: break-word;
+}
+
+/* Botões das tarefas */
+#lista li button {
+    border: none;
+    border-radius: 6px;
+
+    padding: 7px 10px;
+
+    margin-left: 5px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+/* Del e Update */
+#lista li button:first-of-type {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+#lista li button:last-of-type {
+    background-color: #dee2e6;
+    color: #343a40;
+}
+
+#lista li button:hover {
+    filter: brightness(0.92);
+}

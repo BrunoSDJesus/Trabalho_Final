@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    width: 600px;
+    height: 250px;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+input {
+    height: 25px;
+    min-width: 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#numero,
+#binario {
+    flex: 1;
+    width: 0;
+}
+
+button {
+    height: 25px;
+    padding: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+}

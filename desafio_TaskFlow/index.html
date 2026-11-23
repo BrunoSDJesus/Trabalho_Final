@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>TaskFlow</h1>
+        <p>Organize suas tarefas e acompanhe sua produtividade.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="formulario">
+            <h2>Nova tarefa</h2>
+
+            <form id="form-tarefa">
+
+                <input type="text" id="nome-tarefa"
+                    placeholder="Nome da tarefa">
+
+                <textarea id="descricao"
+                    placeholder="Descrição da tarefa"></textarea>
+
+                <select id="categoria">
+                    <option value="">Selecione a categoria</option>
+                    <option value="Estudos">Estudos</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Pessoal">Pessoal</option>
+                </select>
+
+                <select id="prioridade">
+                    <option value="">Selecione a prioridade</option>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+
+                <input type="date" id="data">
+
+                <button type="submit" id="cadastrar">
+                    Cadastrar tarefa
+                </button>
+
+            </form>
+        </section>
+
+        <section class="estatisticas">
+            <h2>Estatísticas</h2>
+
+            <div class="cards-estatisticas">
+                <div class="card">
+                    <span>Total</span>
+                    <strong id="total">0</strong>
+                </div>
+
+                <div class="card">
+                    <span>Pendentes</span>
+                    <strong id="pendentes">0</strong>
+                </div>
+
+                <div class="card">
+                    <span>Concluídas</span>
+                    <strong id="concluidas">0</strong>
+                </div>
+
+                <div class="card">
+                    <span>Prioridade alta</span>
+                    <strong id="alta">0</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="tarefas">
+            <h2>Minhas tarefas</h2>
+
+            <input type="text" id="pesquisa"
+                placeholder="Pesquisar tarefa...">
+
+            <div class="filtros">
+                <button data-filtro="todas">Todas</button>
+                <button data-filtro="pendentes">Pendentes</button>
+                <button data-filtro="concluidas">Concluídas</button>
+                <button data-filtro="alta">Prioridade alta</button>
+            </div>
+
+            <div id="lista"></div>
+        </section>
+
+    </main>
+
+</body>
+</html>

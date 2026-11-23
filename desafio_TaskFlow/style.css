@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+}
+
+header {
+    background: #111c32;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid #26344d;
+}
+
+header h1 {
+    color: #60a5fa;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #111c32;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #26344d;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #93c5fd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #334155;
+    background: #0b1120;
+    color: white;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.cards-estatisticas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card span {
+    color: #94a3b8;
+}
+
+.card strong {
+    font-size: 25px;
+    color: #60a5fa;
+}
+
+#pesquisa {
+    margin-bottom: 15px;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tarefa {
+    background: #1e293b;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border-left: 4px solid #3b82f6;
+}
+
+.tarefa.concluida {
+    opacity: 0.6;
+    border-left-color: #22c55e;
+}
+
+.tarefa h3 {
+    margin-bottom: 8px;
+}
+
+.tarefa p {
+    color: #cbd5e1;
+    margin-bottom: 7px;
+}
+
+.tarefa .acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tarefa .acoes button {
+    font-size: 12px;
+}
+
+@media (max-width: 650px) {
+    .cards-estatisticas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
