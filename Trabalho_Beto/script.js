@@ -67,6 +67,32 @@ function render(listaUsuarios, listaPosts) {
 }
 
 function mostrarPost(id) {
+  const post = posts.find((p) => p.id == id);
+  const comentariosPost = comentarios.filter((cp) => cp.postId == id);
+  const conteudo = document.getElementById("conteudo-detalhe");
+  conteudo.innerHTML = "";
+
+  const tituloPost = criarElemento("h2", 'classe', post.title)
+  const conteudoPost = criarElemento("p", 'classe', post.body)
+
+  conteudo.appendChild(tituloPost)
+  conteudo.appendChild(conteudoPost)
+
+
+  comentariosPost.forEach((p) => {
+      const div = criarElemento("div", "comentario");
+      const strong = criarElemento('strong','classe', p.name)
+      const paragrafo = criarElemento('p', 'classe', p.body)
+
+      div.append(strong)
+      div.append(paragrafo)
+      conteudo.appendChild(div)
+
+
+  })
+
+  document.getElementById("lista").style.display = "none";
+  document.getElementById("detalhe").style.display = "block"; 
   // TODO: achar o post pelo id e filtrar os comentários com postId igual ao id.
   // Preencher #conteudo-detalhe (post + comentários), esconder #lista e mostrar #detalhe.
 }
