@@ -98,6 +98,8 @@ function mostrarPost(id) {
 }
 
 function voltarParaLista() {
+  document.getElementById("lista").style.display = "block";
+  document.getElementById("detalhe").style.display = "none"; 
   // TODO: esconder #detalhe e mostrar #lista de novo.
 }
 
